@@ -1,7 +1,13 @@
 @import "bootstrap";
+@import "compass/css3";
 
+.container {
+  position: relative;
+}
 .cover-picker {
   font-size: 0;
+  margin-top: 40px;
+  margin-bottom: 0;
   
   li {
     line-height: 1.2;
@@ -10,6 +16,11 @@
     
     &:last-child {
       margin-right: 0;
+    }
+    
+    &.active {
+      @include transform(scale(1.1));
+      .cover-artist { opacity: 0; }
     }
   }
   a {
@@ -44,11 +55,26 @@
   font-size: 12px;
 }
 
+.playlist-indicator,
+.playlist-indicator::before {
+  width: 0; height: 0;
+  display: block;
+  position: absolute;
+  border: 16px solid transparent;
+  border-left-width: 15px;
+  border-right-width: 14px;
+  border-bottom-color: #000;
+  bottom: -1px;
+  left: 70px;
+}
+
+
 .playlist {
   width: 100%;
   background: #000;
   color: #cb3a59;
   padding-top: 20px;
+  border-top: 1px solid #666;
 }
 .playlist-options {
   display: none;
