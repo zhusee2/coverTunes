@@ -48,12 +48,28 @@
   width: 100%;
   background: #000;
   color: #cb3a59;
+  padding-top: 20px;
+}
+.playlist-options {
+  display: none;
 }
 .album-actions {
   display: none;
 }
 .album-info {
   padding-left: 40px;
+}
+.album-title, .album-artist {
+  line-height: 1.2;
+  margin: 0;
+}
+.album-title {
+  font-size: 18px;
+}
+.album-artist {
+  font-size: 16px;
+  font-weight: normal;
+  margin-bottom: 20px;
 }
 .album-tracks {
   margin: 0;
@@ -62,6 +78,7 @@
   -webkit-column-gap: 40px;
   
   li {
+    line-height: 1.6;
     counter-increment: track;
   }
   li::before {
@@ -85,5 +102,5 @@
 }
 .album-cover img {
   width: 300px;
-  margin-left: 10px;
+  margin-left: 20px;
 }
