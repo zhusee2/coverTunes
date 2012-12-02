@@ -1,4 +1,5 @@
 *.esproj
 .DS_Store
 .sass-cache
+stylesheets/
 fire_app_log.txt
