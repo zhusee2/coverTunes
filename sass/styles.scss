@@ -1,5 +1,38 @@
-// I gather this file is a starting point for the project.
 @import "bootstrap";
 
-// Include responsive Bootstrap styles
-// @import "bootstrap-responsive";
+.cover-picker {
+  li {
+    line-height: 1.2;
+    display: inline-block;
+  }
+  a {
+    display: block;
+    position: relative;
+    margin-bottom: 3px;
+    @include box-shadow(0 3px 6px rgba(0,0,0,.2));
+    
+    &::after {
+      width: 160px;
+      height: 1px;
+      background: rgba(255,255,255,.5);
+      content: '';
+      display: block;
+      position: absolute;
+      top: 1px;
+      left: 1px;
+    }
+  }
+  img {
+    width: 160px;
+    border: 1px solid rgba(0,0,0,.5);
+  }
+  .cover-title {
+    font-size: 13px;
+    font-weight: bold;
+    display: block;
+  }
+  .cover-artist {
+    color: #777;
+    font-size: 12px;
+  }
+}
