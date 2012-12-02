@@ -49,11 +49,14 @@
   background: #000;
   color: #cb3a59;
 }
+.album-info {
+  padding-left: 40px;
+}
 .album-tracks {
   margin: 0;
   padding: 0;
   -webkit-column-count: 2;
-  -webkit-column-gap: 50px;
+  -webkit-column-gap: 40px;
   
   li {
     counter-increment: track;
@@ -79,4 +82,5 @@
 }
 .album-cover img {
   width: 300px;
+  margin-left: 10px;
 }
