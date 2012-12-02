@@ -58,7 +58,13 @@
   li {
     counter-increment: track;
   }
-  
+  li::before {
+    content: "-";
+    width: 2em;
+    color: transparent;
+    display: block;
+    float: left;
+  }
   li > * {
     display: inline;
   }
