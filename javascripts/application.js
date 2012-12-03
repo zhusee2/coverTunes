@@ -1,0 +1,1 @@
+$('.playlist').addClass('closed hidden');

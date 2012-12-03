@@ -1,6 +1,23 @@
 @import "bootstrap";
 @import "compass/css3";
 
+.hidden {
+  opacity: 0;
+}
+.transition {
+  @include transition(all 250ms ease-in-out);
+}
+.transition-transform {
+  -webkit-transition-property: -webkit-transform;
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  -ms-transition-property: -ms-transform;
+  transition-property: transform;
+}
+.transition-height {
+  @include transition-property(height);
+}
+
 .container {
   position: relative;
 }
@@ -8,6 +25,8 @@
   font-size: 0;
   margin-top: 40px;
   margin-bottom: 0;
+  
+  @extend .transition-transform;
   
   li {
     line-height: 1.2;
@@ -73,11 +92,20 @@
   width: 100%;
   background: #000;
   color: #cb3a59;
-  padding-top: 20px;
   border-top: 1px solid #666;
+  overflow: hidden;
+  
+  &.closed {
+    height: 0;
+  }
+  &.expanded {
+    height: 320px;
+  }
 }
 .playlist-options {
-  display: none;
+  height: 20px;
+  
+  .nav { display: none; }
 }
 .album-actions {
   display: none;
