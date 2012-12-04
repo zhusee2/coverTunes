@@ -6,7 +6,7 @@ $('.cover-picker').on('click', 'a', function(event) {
       coverSelected = coverAnchor.parentNode,
       coverActive = $('.cover-picker .active'),
       albumSelected = coverAnchor.href.replace('#', ''),
-      indicatorPosition = coverSelected.offsetLeft,
+      indicatorPosition = coverSelected.offsetLeft + (coverSelected.offsetWidth / 2) - 15,
       playlistHeight = $('.playlist-inner')[0].getBoundingClientRect().height;
   
   function togglePlaylistForAlbum(album) {
@@ -44,5 +44,6 @@ $('.cover-picker').on('click', 'a', function(event) {
     switchPlaylistToAlbum(albumSelected);
   }
   
+  coverAnchor.blur();
   event.preventDefault();
 });

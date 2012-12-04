@@ -75,8 +75,7 @@
   font-size: 12px;
 }
 
-.playlist-indicator,
-.playlist-indicator::before {
+.playlist-indicator {
   width: 0; height: 0;
   display: block;
   position: absolute;
@@ -86,6 +85,9 @@
   border-bottom-color: #000;
   bottom: -1px;
   left: 70px;
+  
+  @extend .transition;
+  @include transition-property(left);
 }
 
 
