@@ -1,6 +1,3 @@
-
-$('.playlist').addClass('closed hidden transition transition-height');
-
 $('.cover-picker').on('click', 'a', function(event) {
   var coverAnchor = this,
       coverSelected = coverAnchor.parentNode,
