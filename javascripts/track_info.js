@@ -6,7 +6,7 @@ var TRACK_INFO = {
     cover: 'images/4times.jpg',
     colors: {
       background: '#020202',
-      title: '#B85F4B',
+      title: '#cb3a59',
       subtitle: '#757575'
     },
     tracks: [
@@ -27,7 +27,7 @@ var TRACK_INFO = {
     cover: 'images/discovery.jpg',
     colors: {
       background: '#ceb67a',
-      title: '#ddb341',
+      title: '#457b7a',
       subtitle: '#4f4947'
     },
     tracks: [
