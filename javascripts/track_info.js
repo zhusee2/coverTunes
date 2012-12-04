@@ -3,6 +3,7 @@ var TRACK_INFO = {
     title: '4 TIMES',
     artist: 'Koda Kumi',
     release: '2011',
+    cover: 'images/4times.jpg',
     colors: {
       background: '#020202',
       title: '#B85F4B',
@@ -18,11 +19,12 @@ var TRACK_INFO = {
       {title: 'Interlude ～time to... love～', playtime: '0:36'},
       {title: 'KO-SO-KO-SO', playtime: '3:19'}
     ]
-  }
+  },
   'discovery': {
     title: 'Discovery',
     artist: 'Tokyo Incidents',
     release: '2011',
+    cover: 'images/discovery.jpg',
     colors: {
       background: '#ceb67a',
       title: '#ddb341',
@@ -49,6 +51,7 @@ var TRACK_INFO = {
     title: 'PSY Six Rules, Pt. 1',
     artist: 'PSY',
     release: '2012',
+    cover: 'images/sixrules.jpg',
     colors: {
       background: '#1174d5',
       title: '#ffffff',
@@ -67,6 +70,7 @@ var TRACK_INFO = {
     title: 'The Fame',
     artist: 'Lady Gaga',
     release: '2008',
+    cover: 'images/thefame.jpg',
     colors: {
       background: '#ffffff',
       title: '#0c0c0c',
@@ -94,6 +98,7 @@ var TRACK_INFO = {
     title: 'Timebomb - Single',
     artist: 'Kylie Minogue',
     release: '2012',
+    cover: 'images/timebomb.jpg',
     colors: {
       background: '#020202',
       title: '#b85f4b',
