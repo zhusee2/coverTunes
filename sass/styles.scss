@@ -94,7 +94,6 @@
 .playlist {
   width: 100%;
   background: #000;
-  color: #cb3a59;
   border-top: 1px solid #666;
   overflow: hidden;
   
@@ -129,6 +128,7 @@
   margin-bottom: 20px;
 }
 .album-tracks {
+  color: #cb3a59;
   margin: 0;
   padding: 0;
   @include column-count(2);
