@@ -128,18 +128,20 @@
 .album-tracks {
   margin: 0;
   padding: 0;
-  -webkit-column-count: 2;
-  -webkit-column-gap: 40px;
+  @include column-count(2);
+  @include column-gap(40px);
   
   li {
     line-height: 1.6;
+    list-style: none;
     counter-increment: track;
   }
   li::before {
-    content: "-";
-    width: 2em;
-    color: transparent;
+    content: counter(track);
+    width: 1em;
+    text-align: right;
     display: block;
+    margin-right: 0.8em;
     float: left;
   }
   li > * {
