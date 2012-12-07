@@ -170,3 +170,14 @@
   width: 300px;
   margin-left: 20px;
 }
+
+@media screen and (max-width: 940px) {
+  .album-tracks {
+    @include column-count(1);
+  }
+}
+@media screen and (min-width: 1440px) {
+  .album-tracks {
+    @include column-count(3);
+  }
+}
