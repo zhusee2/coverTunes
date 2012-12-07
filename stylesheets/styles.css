@@ -5280,6 +5280,10 @@ a.label:hover, a.badge:hover {
   height: auto;
 }
 
+.playlist, .playlist-inner {
+  min-width: 940px;
+}
+
 .playlist-options {
   height: 20px;
 }
@@ -5326,9 +5330,11 @@ a.label:hover, a.badge:hover {
   column-gap: 40px;
 }
 .album-tracks li {
+  width: 100%;
   line-height: 1.6;
   list-style: none;
   counter-increment: track;
+  display: inline-block;
 }
 .album-tracks li::before {
   content: counter(track);
@@ -5338,18 +5344,39 @@ a.label:hover, a.badge:hover {
   margin-right: 0.8em;
   float: left;
 }
-.album-tracks li > * {
-  display: inline;
-}
 .album-tracks .track-title {
   color: #ccc;
   font-weight: normal;
+  margin: 0 60px 0 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .album-tracks .track-playtime {
+  margin-top: -1.6em;
   float: right;
 }
 
 .album-cover img {
   width: 300px;
   margin-left: 20px;
+}
+
+@media screen and (max-width: 940px) {
+  .album-tracks {
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    -ms-column-count: 1;
+    -o-column-count: 1;
+    column-count: 1;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .album-tracks {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    -ms-column-count: 3;
+    -o-column-count: 3;
+    column-count: 3;
+  }
 }
