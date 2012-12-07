@@ -104,6 +104,9 @@
     height: auto;
   }
 }
+.playlist, .playlist-inner {
+  min-width: 940px;
+}
 .playlist-options {
   height: 20px;
   
@@ -135,9 +138,11 @@
   @include column-gap(40px);
   
   li {
+    width: 100%;
     line-height: 1.6;
     list-style: none;
     counter-increment: track;
+    display: inline-block;
   }
   li::before {
     content: counter(track);
@@ -147,19 +152,32 @@
     margin-right: 0.8em;
     float: left;
   }
-  li > * {
-    display: inline;
-  }
   
   .track-title {
     color: #ccc;
     font-weight: normal;
+    margin: 0 60px 0 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   .track-playtime {
+    margin-top: -1.6em;
     float: right;
   }
 }
 .album-cover img {
   width: 300px;
   margin-left: 20px;
+}
+
+@media screen and (max-width: 940px) {
+  .album-tracks {
+    @include column-count(1);
+  }
+}
+@media screen and (min-width: 1440px) {
+  .album-tracks {
+    @include column-count(3);
+  }
 }
