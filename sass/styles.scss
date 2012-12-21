@@ -75,19 +75,32 @@
   font-size: 12px;
 }
 
-.playlist-indicator {
+.playlist-indicator,
+.playlist-indicator::before {
   width: 0; height: 0;
   display: block;
   position: absolute;
   border: 16px solid transparent;
-  border-left-width: 15px;
-  border-right-width: 14px;
+}
+
+.playlist-indicator {
   border-bottom-color: #000;
   bottom: -1px;
   left: 70px;
   
   @extend .transition;
   @include transition-property(left);
+}
+.playlist-indicator::before {
+  $borderWidth: 1;
+  $additionalWidth: $borderWidth * sqrt(2);
+  
+  content: '';
+  border-width: 16px + $additionalWidth;
+  border-bottom-color: darken(#666, 45%);
+  top: -16px - ($additionalWidth * 2);
+  left: -16px - $additionalWidth;
+  z-index: -1;
 }
 
 
