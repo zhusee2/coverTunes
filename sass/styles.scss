@@ -25,19 +25,19 @@
   font-size: 0;
   margin-top: 40px;
   margin-bottom: 0;
-  
+
   li {
     line-height: 1.2;
     margin-right: 32px;
     display: inline-block;
-    
+
     @extend .transition;
     @extend .transition-transform;
-    
+
     &:last-child {
       margin-right: 0;
     }
-    
+
     &.active {
       @include transform(scale(1.1));
       .cover-artist { opacity: 0; }
@@ -48,7 +48,7 @@
     position: relative;
     margin-bottom: 3px;
     @include box-shadow(0 3px 8px rgba(0,0,0,.25));
-    
+
     &::after {
       width: 160px;
       height: 1px;
@@ -76,7 +76,7 @@
 }
 
 .playlist-indicator,
-.playlist-indicator::before {
+.playlist-indicator:after {
   width: 0; height: 0;
   display: block;
   position: absolute;
@@ -84,22 +84,19 @@
 }
 
 .playlist-indicator {
-  border-bottom-color: #000;
+  border-bottom-color: #666;
   bottom: -1px;
   left: 70px;
-  
+
   @extend .transition;
   @include transition-property(left);
 }
-.playlist-indicator::before {
-  $borderWidth: 1;
-  $additionalWidth: $borderWidth * sqrt(2);
-  
+.playlist-indicator:after {
   content: '';
-  border-width: 16px + $additionalWidth;
-  border-bottom-color: darken(#666, 45%);
-  top: -16px - ($additionalWidth * 2);
-  left: -16px - $additionalWidth;
+  border-width: 18px;
+  border-bottom-color: darken(#666, 20%);
+  top: -19px;
+  left: -18px;
   z-index: -1;
 }
 
@@ -109,7 +106,7 @@
   background: #000;
   border-top: 1px solid #666;
   overflow: hidden;
-  
+
   &.closed {
     height: 0;
   }
@@ -122,7 +119,7 @@
 }
 .playlist-options {
   height: 20px;
-  
+
   .nav { display: none; }
 }
 .album-actions {
@@ -149,7 +146,7 @@
   padding: 0;
   @include column-count(2);
   @include column-gap(40px);
-  
+
   li {
     width: 100%;
     line-height: 1.6;
@@ -165,7 +162,7 @@
     margin-right: 0.8em;
     float: left;
   }
-  
+
   .track-title {
     color: #ccc;
     font-weight: normal;
